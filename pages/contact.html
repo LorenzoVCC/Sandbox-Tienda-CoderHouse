@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="../assets/css/main-styles.css">
+</head>
+<!--------  -->
+
+<body>
+    <header>
+        <div class="header-main-container">
+
+            <a href="../index.html">
+                <div class="main-logo">
+                    <img src="../assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
+                    <h2>Nombre <br> Local</h2>
+                </div>
+            </a>
+            <!-- ----------------------------------------------------------------------- -->
+            <div class="header-navmenu-login">
+                <nav aria-label="main-nav">
+                    <ul>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="branches.html">Sucursales</a></li>
+                        <li><a href="our-history.html">Historia</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="auth-buttons">
+                    <button type="button">Ingresar</button>
+                    <button type="button">Registro</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="contact-main">
+        <h1>Contacto</h1>
+        <div class="contact-h1-container">
+            <p>Completá el formulario y nos pondremos en contacto con vos.</p>
+        </div>
+
+        <section class="formulario-contacto">
+            <form id="form-contact">
+
+                <div class="datos-contact">
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="datos-contact">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="datos-contact">
+                    <label for="mensaje">Mensaje</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                </div>
+
+                <br>
+                <div class="radiobtns-container">
+
+                    <fieldset>
+                        <legend>Motivo de contacto</legend>
+
+                        <label>
+                            <input type="radio" name="motivo" value="consulta">
+                            Consulta
+                        </label><br>
+
+                        <label>
+                            <input type="radio" name="motivo" value="reclamo">
+                            Reclamo
+                        </label><br>
+
+                        <label>
+                            <input type="radio" name="motivo" value="sugerencia">
+                            Sugerencia
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Preferencias</legend>
+
+                        <label>
+                            <input type="checkbox" name="newsletter">
+                            Quiero recibir novedades
+                        </label><br>
+
+                        <label>
+                            <input type="checkbox" name="terminos" required>
+                            Acepto los términos y condiciones
+                        </label>
+                    </fieldset>
+
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2025 LVecchia. Todos los derechos reservados.</p>
+
+        <div class="footer-redes">
+            <nav aria-label="social-media">
+                <ul>
+                    <li><a href=""><img src="../assets/imgs/ig.svg" alt="instagram"></a></li>
+                    <li><a href=""><img src="../assets/imgs/reddit.svg" alt="reddit"></a></li>
+                    <li><a href=""><img src="../assets/imgs/fb.svg" alt="facebook"></a></li>
+                    <li><a href=""><img src="../assets/imgs/lkdn.svg" alt="linkedin"></a></li>
+                    <li><a href=""><img src="../assets/imgs/pinterest.svg" alt="pinterest"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>

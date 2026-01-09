@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="../assets/css/main-styles.css">
+</head>
+<!--------  -->
+
+<body>
+    <header>
+        <div class="header-main-container">
+
+            <a href="../index.html">
+                <div class="main-logo">
+                    <img src="../assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
+                    <h2>Nombre <br> Local</h2>
+                </div>
+            </a>
+            <!-- ----------------------------------------------------------------------- -->
+            <div class="header-navmenu-login">
+                <nav aria-label="main-nav">
+                    <ul>
+                        <li><a href="products.html">Productos</a></li>
+                        <li><a href="branches.html">Sucursales</a></li>
+                        <li><a href="our-history.html">Historia</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+                <div class="auth-buttons">
+                    <button type="button">Ingresar</button>
+                    <button type="button">Registro</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="products-main">
+        <div class="productos-filtros-divcontainer">
+            <h1>Productos</h1>
+
+            <section class="filtros-productos-container-options">
+                <form>
+                    <label>Categoría
+                        <select>
+                            <option>Todos</option>
+                            <option>Ropa</option>
+                            <option>Accesorios</option>
+                            <option>Calzado</option>
+                        </select>
+                    </label>
+
+                    <label>Ordenar por
+                        <select>
+                            <option>Más recientes</option>
+                            <option>Menor precio</option>
+                            <option>Mayor precio</option>
+                        </select>
+                    </label>
+                </form>
+            </section>
+        </div>
+
+        <!--  -->
+        <section class="lista-productos">
+
+            <article class="producto">
+                <img src="../assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
+                <h3>Nombre_prod</h3>
+                <p class="descrip-producto">Descripción</p>
+                <div class="price-n-kart">
+                    <p>Precio</p>
+                    <button type="button">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
+                <h3>Nombre_prod</h3>
+                <p class="descrip-producto">Descripción</p>
+                <div class="price-n-kart">
+                    <p>Precio</p>
+                    <button type="button">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
+                <h3>Nombre_prod</h3>
+                <p class="descrip-producto">Descripción</p>
+                <div class="price-n-kart">
+                    <p>Precio</p>
+                    <button type="button">Agregar al carrito</button>
+                </div>
+            </article>
+
+            <article class="producto">
+                <img src="../assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
+                <h3>Nombre_prod</h3>
+                <p class="descrip-producto">Descripción</p>
+                <div class="price-n-kart">
+                    <p>Precio</p>
+                    <button type="button">Agregar al carrito</button>
+                </div>
+            </article>
+        </section>
+        
+        <div class="proximamente">
+            <h3>Proximamente habrá mas productos... simulando como queda</h3>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 LVecchia. Todos los derechos reservados.</p>
+
+        <form class="footer-contacto">
+            <input type="text" placeholder="Contactanos...">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="footer-redes">
+            <nav aria-label="social-media">
+                <ul>
+                    <li><a href=""><img src="../assets/imgs/ig.svg" alt="instagram"></a></li>
+                    <li><a href=""><img src="../assets/imgs/reddit.svg" alt="reddit"></a></li>
+                    <li><a href=""><img src="../assets/imgs/fb.svg" alt="facebook"></a></li>
+                    <li><a href=""><img src="../assets/imgs/lkdn.svg" alt="linkedin"></a></li>
+                    <li><a href=""><img src="../assets/imgs/pinterest.svg" alt="pinterest"></a></li>
+                </ul>   
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
