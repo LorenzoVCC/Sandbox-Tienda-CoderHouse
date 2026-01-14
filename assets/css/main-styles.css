@@ -125,9 +125,13 @@ button:hover {
     grid-template-areas: "center";
     transition: 1s;
     width: 100%;
-    height: 200px;
+    height: clamp(320px, 50vh, 520px);
     margin-top: 50px;
     color: white;
+}
+
+hr {
+    margin-bottom: 30px;
 }
 
 .hero-img-left,
@@ -170,12 +174,146 @@ button:hover {
 #hero button:hover {
     background-color: rgb(111, 176, 142);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
-} 
+}
+
+.title-flex {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flexer {
+    background-color: orange;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Productos///////////////////////////////////////////////*/
+.productos-destacados {
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: clamp(16px, 4vw, 50px);
+}
+
+.producto {
+    background-color: rgb(63, 124, 94);
+    font-family: "LemonLight";
+    font-size: 10px;
+    border: 1px solid black;
+    color: white;
+
+    height: 300px;
+    width: 80%;
+    padding: 15px;
+    gap: 30px;
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    cursor: pointer;
+}
+
+.producto:hover {
+    background-color: rgb(85, 144, 113);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.product-data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-data-container img {
+    height: 150px;
+    width: 100%;
+    padding-bottom: 10px;
+    display: block;
+    align-self: center;
+}
+
+.price-n-kart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.price-n-kart button {
+    width: 60%;
+    font-size: .7em;
+}
+
+/*Temporadas//////////////////////*/
+
+#temporadas {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-flex {
+    width: 100%;
+}
+
+#temporadas h2 {
+    background-color: orange;
+    color: white;
+    width: 180px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.temporadas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    padding: clamp(16px, 4vw, 25px);
+}
 
 
-/*FIN INDEX MOBILE*/
-/********************************************************************************************/
-/*****************************************************************************************/
+/* Temporada Card */
+.temporada {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: rgb(63, 124, 94);
+    border: 2px solid black;
+    padding: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.temporada:hover {
+    background-color: rgb(85, 144, 113);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.temporada img {
+    width: 50%;
+    height: auto;
+    display: block;
+}
+
+.temporada-texto-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 20px;
+}
+
+/***********************************************
+FIN INDEX MOBILE
+*********************************************/
 
 @media (min-width: 768px) and (max-width: 1023px) {
 
@@ -194,7 +332,7 @@ button:hover {
     }
 
     .header-navmenu-login {
-        flex-direction: row;
+        display: grid;
         justify-self: end;
         justify-content: flex-end;
         gap: 18px;
@@ -205,11 +343,18 @@ button:hover {
         gap: 22px;
     }
 
+    .auth-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     /* Hero */
     #hero {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "center right";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "center center right";
         height: clamp(320px, 50vh, 520px);
         transition: 1s;
         margin-top: 50px;
@@ -225,9 +370,11 @@ button:hover {
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         background-image: url("../imgs/SweterNaranja-Hero.jpg");
         background-size: cover;
         background-position: center center;
+
         padding-left: 60px;
         font-size: 10px;
     }
@@ -259,6 +406,7 @@ button:hover {
         background-color: rgb(63, 124, 94);
         color: white;
         transition: .3s;
+        outline: none;
     }
 
     #hero button:hover {
@@ -271,9 +419,12 @@ button:hover {
 
     /* Main content - Destacados*/
     #destacados {
-        margin-top: 80px;
+        margin-top: 50px;
         margin-bottom: 30px;
         color: white;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
     }
 
     .title-flex {
@@ -287,12 +438,12 @@ button:hover {
         color: white;
         width: 340px;
         padding: 5px;
-        margin-left: 40px;
+        font-size: 1.5em;
     }
 
     /*Div productos destacados */
     .productos-destacados {
-        display: grid;
+        background-color: transparent;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 20px;
         padding: clamp(16px, 4vw, 50px);
@@ -339,7 +490,7 @@ button:hover {
     }
 
     .price-n-kart button {
-        width: 150px;
+        width: 50%;
         font-size: 10px;
     }
 
@@ -355,12 +506,16 @@ button:hover {
         flex-direction: column;
     }
 
+    .title-flex {
+        width: 100%;
+    }
+
     #temporadas h2 {
         background-color: orange;
         color: white;
         width: 180px;
-        margin-left: 25px;
         margin-bottom: 20px;
+
         display: flex;
         justify-content: center;
     }
@@ -457,7 +612,7 @@ button:hover {
         transition: .5s;
         width: 100%;
         height: clamp(320px, 50vh, 520px);
-        margin-top: 50px;
+        /*     margin-top: 50px;*/
         color: white;
     }
 
@@ -476,6 +631,7 @@ button:hover {
         justify-content: center;
         align-items: center;
         text-align: center;
+        font-size: 15px;
 
         background-image: url("../imgs/SweterNaranja-Hero.jpg");
         background-size: cover;
@@ -504,10 +660,15 @@ button:hover {
 
     #hero button {
         width: min(300px, 90%);
-        font-size: 15px;
+        height: min(50px);
+        padding: 10px;
+        font-size: 20px;
         background-color: rgb(63, 124, 94);
         color: white;
         transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     #hero button:hover {
@@ -521,18 +682,19 @@ button:hover {
         margin-bottom: 30px;
         color: white;
         display: grid;
+        background-color: transparent;
     }
 
     #destacados h2 {
         background-color: orange;
         width: 340px;
-        padding-left: 5px;
         color: white;
-        margin-left: 45px;
+        font-size: 1.5em;
     }
 
     /*Div productos destacados */
     .productos-destacados {
+        background-color: transparent;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 20px;
@@ -543,6 +705,7 @@ button:hover {
     /*Card producto destacado */
     .producto {
         font-family: "LemonLight";
+        font-size: 1em;
         background-color: rgb(63, 124, 94);
         border: 1px solid black;
         color: white;
@@ -586,7 +749,8 @@ button:hover {
     }
 
     .price-n-kart button {
-        width: 200px;
+        width: 60%;
+        word-break: normal;
     }
 
 
@@ -597,6 +761,8 @@ button:hover {
         display: flex;
         flex-direction: column;
     }
+
+
 
     #temporadas h2 {
         background-color: orange;
@@ -652,10 +818,6 @@ button:hover {
     }
 }
 
-
-/********************************************************************************************/
-/********************************************************************************************/
-/********************************************************************************************/
 /********************************************************************************************/
 /*//////////////////////////////////////////////////////////////////////////////////////////////////
 /* FIN INDEX //////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -1007,6 +1169,44 @@ fieldset {
 legend {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+/* Footer - MOBILE */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "copyright social-media";
+    align-items: center;
+    padding: 40px;
+    background-color: rgb(63, 124, 94);
+    box-sizing: border-box;
+    color: white;
+
+}
+
+footer p {
+    grid-area: copyright;
+    font-size: .5em;
+}
+
+.footer-contacto {
+    display: none;
+}
+
+.footer-redes {
+    grid-area: social-media;
+    display: flex;
+    justify-self: end;
+}
+
+.footer-redes img {
+    height: 20px;
+}
+
+.footer-redes ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
 }
 
 
