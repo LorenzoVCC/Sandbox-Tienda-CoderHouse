@@ -11,16 +11,16 @@
 
 <body>
     <header>
-        <div class="header-main-container">
+        <div class="site-header">
 
             <a href="../index.html">
-                <div class="main-logo">
+                <div class="site-header__logo">
                     <img src="../assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
                     <h2>Nombre <br> Local</h2>
                 </div>
             </a>
             <!-- ----------------------------------------------------------------------- -->
-            <div class="header-navmenu-login">
+            <div class="site-header__nav">
                 <nav aria-label="main-nav">
                     <ul>
                         <li><a href="products.html">Productos</a></li>
@@ -30,7 +30,7 @@
                     </ul>
                 </nav>
 
-                <div class="auth-buttons">
+                <div class="site-header__auth">
                     <button type="button">Ingresar</button>
                     <button type="button">Registro</button>
                 </div>
@@ -38,28 +38,37 @@
         </div>
     </header>
 
+    <!--//form-->
     <main id="contact-main">
-        <h1>Contacto</h1>
-        <div class="contact-h1-container">
-            <p>Completá el formulario y nos pondremos en contacto con vos.</p>
+
+        <div class="title-container">
+
+            <h1>Contacto</h1>
+            
+            <div class="contact-h1-container">
+                <p id="completeFormText">Completá el formulario y nos pondremos en contacto con vos.</p>
+            </div>
         </div>
 
         <section class="formulario-contacto">
             <form id="form-contact">
 
-                <div class="datos-contact">
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
+                <div class="inputs-container">
 
-                <div class="datos-contact">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" required>
-                </div>
+                    <div class="datos-contact">
+                        <label for="nombre">Nombre</label><br>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
 
-                <div class="datos-contact">
-                    <label for="mensaje">Mensaje</label><br>
-                    <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                    <div class="datos-contact">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="datos-contact">
+                        <label for="mensaje">Mensaje</label><br>
+                        <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+                    </div>
                 </div>
 
                 <br>

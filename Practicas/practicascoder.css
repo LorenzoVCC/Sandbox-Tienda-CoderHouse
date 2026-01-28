@@ -1,0 +1,14 @@
+body {
+    background-color: red;
+}
+
+
+.articles {
+    display: flex;
+    height: auto;
+    background-color: orange;
+}
+
+.container-fluid { background-color: pink;}
+
+

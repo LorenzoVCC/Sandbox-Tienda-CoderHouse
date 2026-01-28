@@ -5,23 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+
     <link rel="stylesheet" href="assets/css/main-styles.css">
 </head>
 <!--------  -->
 
 <body>
     <header>
-        <div class="header-main-container">
+        <div class="site-header">
 
             <a href="index.html">
-                <div class="main-logo">
+                <div class="site-header__logo">
                     <img src="assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
                     <h2>Nombre <br> Local</h2>
                 </div>
             </a>
 
             <!-- ----------------------------------------------------------------------- -->
-            <div class="header-navmenu-login">
+            <div class="site-header__nav">
                 <nav aria-label="main-nav">
                     <ul>
                         <li><a href="pages/products.html">Productos</a></li>
@@ -31,7 +32,7 @@
                     </ul>
                 </nav>
 
-                <div class="auth-buttons">
+                <div class="site-header__auth">
                     <button type="button">Ingresar</button>
                     <button type="button">Registro</button>
                 </div>
@@ -69,70 +70,68 @@
         <!--------  ----------------------------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------- -->
         <!-- ----------------------------------------------------------------------- -->
-<!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
-        <section id="destacados">
 
+        <section id="destacados">
+            <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
             <div class="title-flex">
                 <div class="flexer">
                     <h2>Productos Destacados</h2>
                 </div>
             </div>
+            <!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  --><!--  -->
 
             <div class="destacados-main-container">
+
                 <div class="productos-destacados">
 
                     <article class="producto">
-                        <div class="product-data-container">
+                        <div class="product-img-container">
                             <img src="assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
-                            <h3>Nombre_prod</h3>
-                            <p class="descrip-producto">Descripción</p>
                         </div>
+                        <h3>Nombre_prod</h3>
 
-                        <div class="price-n-kart">
+                        <div class="product-card-footer">
                             <p>Precio</p>
                             <button type="button">Agregar al carrito</button>
                         </div>
                     </article>
 
                     <article class="producto">
-
-                        <div class="product-data-container">
+                        <div class="product-img-container">
                             <img src="assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
-                            <h3>Nombre_prod</h3>
-                            <p class="descrip-producto">Descripción</p>
                         </div>
+                        <h3>Nombre_prod</h3>
 
-                        <div class="price-n-kart">
+                        <div class="product-card-footer">
                             <p>Precio</p>
                             <button type="button">Agregar al carrito</button>
                         </div>
                     </article>
 
                     <article class="producto">
-                        <div class="product-data-container">
+                        <div class="product-img-container">
                             <img src="assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
-                            <h3>Nombre_prod</h3>
-                            <p class="descrip-producto">Descripción</p>
                         </div>
+                        <h3>Nombre_prod</h3>
 
-                        <div class="price-n-kart">
+                        <div class="product-card-footer">
                             <p>Precio</p>
                             <button type="button">Agregar al carrito</button>
                         </div>
                     </article>
 
                     <article class="producto">
-                        <div class="product-data-container">
+                        <div class="product-img-container">
                             <img src="assets/imgs/camara-generica.jpg" alt="Producto destacado: Nombre_prod">
-                            <h3>Nombre_prod</h3>
-                            <p class="descrip-producto">Descripción</p>
                         </div>
+                        <h3>Nombre_prod</h3>
 
-                        <div class="price-n-kart">
+                        <div class="product-card-footer">
                             <p>Precio</p>
                             <button type="button">Agregar al carrito</button>
                         </div>
                     </article>
+
                 </div>
             </div>
         </section>
@@ -150,7 +149,10 @@
             <div class="temporadas-container">
 
                 <article class="temporada">
-                    <img src="assets/imgs/camara-generica.jpg" alt="Temporada de Verano">
+                    <div class="temp-img-container">
+                        <img src="assets/imgs/camara-generica.jpg" alt="Temporada de Verano">
+                    </div>
+
                     <div class="temporada-texto-container">
                         <h3>Temporada</h3>
                         <p>Descripción de productos x temporada</p>
@@ -158,12 +160,16 @@
                 </article>
 
                 <article class="temporada">
-                    <img src="assets/imgs/camara-generica.jpg" alt="Temporada de Verano">
+                    <div class="temp-img-container">
+                        <img src="assets/imgs/camara-generica.jpg" alt="Temporada de Verano">
+                    </div>
+
                     <div class="temporada-texto-container">
                         <h3>Temporada</h3>
                         <p>Descripción de productos x temporada</p>
                     </div>
                 </article>
+
             </div>
 
         </section>
