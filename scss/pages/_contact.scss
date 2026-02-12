@@ -1,0 +1,253 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+/* Contact ////////////////////////////////////////////////////////////////////////*/
+/* Contenedores generales */
+@media (max-width: 400px) {
+    #contact-main {
+        /*flex-center*/
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-container {
+        padding: 20px;
+    }
+
+    #contact-main h1 {
+        /*Contacto*/
+        background-color: $accent;
+        color: $white;
+        text-align: center;
+    }
+
+    .contact-h1-container {
+        display: flex;
+        color: $white;
+    }
+
+    #completeFormText {
+        /*completa el formulario....*/
+        color: $white;
+    }
+
+    .formulario-contacto {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form-contact {
+
+        background-color: $green-dark;
+        border: 1px solid black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .datos-contact {
+        color: $white;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+    }
+
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+    #contact-main {
+        /*flex-center*/
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-container {
+        padding: 20px;
+    }
+
+    #contact-main h1 {
+        /*Contacto*/
+        background-color: $accent;
+        color: $white;
+        text-align: center;
+    }
+
+    .contact-h1-container {
+        display: flex;
+        color: $white;
+    }
+
+    #completeFormText {
+        /*completa el formulario....*/
+        color: $white;
+    }
+
+    .formulario-contacto {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form-contact {
+        background-color: $accent;
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputs-container {
+        width: 100%;
+    }
+
+    .datos-contact {
+        color: $white;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+    }
+
+    .radiobtns-container {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    #contact-main {
+        /*flex-center*/
+        padding: 40px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact-main h1 {
+        /*Contacto*/
+        background-color: $accent;
+        color: $white;
+        text-align: center;
+    }
+
+    .contact-h1-container {
+        display: flex;
+        color: $white;
+    }
+
+    #completeFormText {
+        /*completa el formulario....*/
+        color: $white;
+    }
+}
+
+
+#contact-main {
+    /*flex-center*/
+    padding-top: 40px;
+    text-align: left;
+    display: flex;
+    gap: 30px;
+}
+
+#contact-main h1 {
+    /*Contacto*/
+    background-color: $accent;
+    padding-left: 30px;
+    color: $white;
+    margin-bottom: 30px;
+}
+
+.contact-h1-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: $white;
+}
+
+#contact-main p {
+    /*completa el formulario....*/
+    background-color: $accent;
+}
+
+/* Container de form */
+.formulario-contacto {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+
+/* <Form> */
+#form-contact {
+    width: 90%;
+    max-width: 600px;
+    height: 650px;
+    background-color: $green-dark;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* INPUTS PARA EL USER */
+.datos-contact {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: $white;
+}
+
+.datos-contact input {
+    height: 1.8rem;
+    width: 60%;
+    border: 1px solid black;
+}
+
+.datos-contact textarea {
+    width: 60%;
+    border: 1px solid black;
+}
+
+.datos-contact label {
+    width: 20%;
+    padding-left: 5px;
+}
+
+/* Radio Buttons */
+.radiobtns-container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.radiobtns-container button {
+    width: 30%;
+}
+
+fieldset {
+    color: $white;
+    width: 80%;
+    padding: 10px;
+}
+
+legend {
+    padding-left: 10px;
+    padding-right: 10px;
+}

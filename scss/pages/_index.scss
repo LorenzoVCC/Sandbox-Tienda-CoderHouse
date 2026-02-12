@@ -1,0 +1,879 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "center";
+    transition: 1s;
+    width: 100%;
+    height: clamp(320px, 50vh, 520px);
+    margin-top: 50px;
+    color: $white;
+}
+
+hr {
+    margin: 0;
+}
+
+.hero-img-left,
+.hero-img-right {
+    display: none;
+}
+
+.hero-img-center {
+    grid-area: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    background-image: url("../imgs/SweterNaranja-Hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    font-size: 10px;
+}
+
+#hero h1 {
+    font-family: "LemonMedium";
+    letter-spacing: 5px;
+}
+
+#hero p {
+    font-family: "LemonLight";
+    letter-spacing: 3px;
+}
+
+#hero button {
+    width: min(300px, 90%);
+    font-size: 15px;
+    background-color: $green-dark;
+    color: $white;
+    transition: .3s;
+}
+
+#hero button:hover {
+    background-color:$green-medium;
+    box-shadow: 0px 5px 5px 0px $black-overlay;
+}
+
+/* /////////////////////////////////////////////////////// */
+
+#destacados {
+    margin-top: 30px;
+}
+
+.title-flex {
+    color: $white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.flexer {
+    background-color: $accent;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/*Productos///////////////////////////////////////////////*/
+.productos-destacados {
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: clamp(16px, 4vw, 50px);
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    background-color: $green-dark;
+    border: 1px solid black;
+    color: $white;
+    gap: 40px;
+
+    transition: .3s;
+    padding: 10px;
+
+    font-family: "LemonLight";
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.producto:hover {
+    background-color:$green-primary;
+    box-shadow: 10px 10px 5px 0px $black-overlay;
+}
+
+.product-img-container {
+    width: 100%;
+    overflow: hidden;
+    background: $white;
+    padding: 20px;
+}
+
+.product-img-container img {
+    width: 100%;
+    padding-bottom: 10px;
+    display: block;
+    align-self: center;
+}
+
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.product-card-footer button {
+    width: 60%;
+    font-size: .7em;
+}
+
+/*Temporadas//////////////////////*/
+
+#temporadas {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-flex {
+    width: 100%;
+}
+
+#temporadas h2 {
+    background-color: $accent;
+    color: $white;
+    width: auto;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    padding: 2px 20px;
+}
+
+.temporadas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 20px;
+}
+
+/* Temporada Card */
+.temporada {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    background-color: $green-dark;
+    border: 1px solid black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.temporada:hover {
+    background-color:$green-primary;
+    box-shadow: 10px 10px 5px 0px $black-overlay;
+}
+
+.temp-img-container {
+    overflow: hidden;
+    height: 100%;
+    width: 30%;
+    padding: 10px;
+}
+
+.temp-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.temporada-texto-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    padding: 20px;
+}
+
+@media (max-width: 430px) {
+    #destacados {
+        margin-top: 30px;
+    }
+
+    .title-flex {
+        color: $white;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .flexer {
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    /*Productos///////////////////////////////////////////////*/
+    .productos-destacados {
+        width: 100%;
+        gap: 20px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    .producto {
+        background-color: $green-dark;
+        font-family: "LemonLight";
+        font-size: 10px;
+        border: 1px solid black;
+        color: $white;
+
+        height: auto;
+        width: 100%;
+        gap: 30px;
+        transition: .3s;
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        cursor: pointer;
+
+    }
+
+    .producto:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .product-data-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-data-container img {
+        height: 150px;
+        width: 100%;
+        padding-bottom: 10px;
+        display: block;
+        align-self: center;
+    }
+
+    .product-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .product-card-footer button {
+        width: 60%;
+        font-size: .7em;
+    }
+
+    /*Temporadas//////////////////////*/
+
+    #temporadas {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        color: $white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .title-flex {
+        width: 100%;
+    }
+
+    #temporadas h2 {
+        background-color: $accent;
+        color: $white;
+        width: auto;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .temporadas-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .temp-img-container {
+        width: 20%;
+        background: $accent;
+        padding: 20px;
+    }
+
+    /* Temporada Card */
+    .temporada {
+        height: 150px;
+        width: 50%;
+        display: flex;
+        background-color: $green-dark;
+        border: 2px solid black;
+        padding: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        font-size: 10px;
+    }
+
+    .temporada:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .temporada img {
+        width: auto;
+        height: auto;
+        display: block;
+    }
+
+    .temporada-texto-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 20px;
+        padding: 20px;
+        font-size: .6em;
+    }
+}
+
+/***********************************************
+FIN INDEX MOBILE
+*********************************************/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .site-header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas: "logo menu";
+        padding: 16px 20px;
+        height: auto;
+        background-color: $green-dark;
+    }
+
+    .site-header__logo {
+        justify-content: flex-start;
+        padding: 12px 20px;
+    }
+
+    .site-header__nav {
+        display: grid;
+        justify-self: end;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .site-header__nav ul {
+        justify-content: flex-end;
+        gap: 22px;
+    }
+
+    .site-header__auth {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero */
+    #hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "center center right";
+        height: clamp(320px, 50vh, 520px);
+        transition: 1s;
+        margin-top: 50px;
+        color: $white;
+    }
+
+    .hero-img-left {
+        display: none;
+    }
+
+    .hero-img-center {
+        grid-area: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        background-image: url("../imgs/SweterNaranja-Hero.jpg");
+        background-size: cover;
+        background-position: center center;
+
+        padding-left: 60px;
+        font-size: 10px;
+    }
+
+    .hero-img-right {
+        grid-area: right;
+        display: block;
+        height: 100%;
+        background-image: url("../imgs/RemeraBlanca-Hero.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #hero h1 {
+        padding-bottom: 20px;
+        font-family: "LemonMedium";
+        letter-spacing: 5px;
+    }
+
+    #hero p {
+        padding-bottom: 50px;
+        font-family: "LemonLight";
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    #hero button {
+        width: min(300px, 90%);
+        font-size: 15px;
+        background-color: $green-dark;
+        color: $white;
+        transition: .3s;
+        outline: none;
+    }
+
+    #hero button:hover {
+        background-color:$green-medium;
+        box-shadow: 0px 5px 5px 0px $black-overlay;
+    }
+
+    /*******************/
+
+
+    /* Main content - Destacados*/
+    #destacados {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: $white;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-flex {
+        /*Container para flexear el #destacados h2*/
+        display: flex;
+        justify-content: center;
+    }
+
+    #destacados h2 {
+        color: $white;
+        width: 340px;
+        padding: 5px;
+        font-size: 1.5em;
+    }
+
+    /*Div productos destacados */
+    .productos-destacados {
+        background-color: transparent;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        padding: clamp(16px, 4vw, 50px);
+        justify-items: center;
+    }
+
+    /*Card producto destacado */
+    .producto {
+        font-family: "LemonLight";
+        background-color: $green-dark;
+        border: 1px solid black;
+        color: $white;
+        font-size: 15px;
+
+        height: auto;
+        width: auto;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .producto:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .producto img {
+        height: 300px;
+        padding-bottom: 20px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .product-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .product-card-footer button {
+        width: 50%;
+        font-size: 10px;
+    }
+
+
+    /*******************/
+    /*SECCION CONTENEDORA DE TEMPORADAS* --- TABLET*/
+
+    #temporadas {
+        margin-top: 50px;
+        margin-bottom: 40px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title-flex {
+        width: 100%;
+    }
+
+    #temporadas h2 {
+        background-color: $accent;
+        color: $white;
+        width: auto;
+        margin-bottom: 20px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .temporadas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 30px;
+        padding: clamp(16px, 4vw, 25px);
+    }
+
+    /* Temporada Card */
+    .temporada {
+        width: 100%;
+        min-width: 0;
+        height: 300px;
+        display: flex;
+        background-color: $green-dark;
+        padding: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid black;
+    }
+
+    .temporada:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .temp-img-container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .temp-img-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .temporada-texto-container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 20px;
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/********************************************************************************************/
+/*******************************************************************************/
+
+@media (min-width: 1024px) {
+
+    /*INDEX DESKTOP*/
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .site-header {
+        width: 100%;
+        background-color: $green-dark;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas: "logo menu";
+        align-items: center;
+        height: 140px;
+        padding: 10px;
+    }
+
+    .site-header__nav {
+        flex-direction: row;
+        justify-self: end;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .site-header__nav ul {
+        justify-content: flex-end;
+        gap: 22px;
+    }
+
+    .site-header__auth {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Main content - Hero*/
+    #hero {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-areas: "left center right";
+        transition: .5s;
+        width: 100%;
+        height: clamp(320px, 50vh, 520px);
+        /*     margin-top: 50px;*/
+        color: $white;
+    }
+
+    .hero-img-left {
+        display: block;
+        grid-area: left;
+        background-image: url("../imgs/CamperaNegra-Hero.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-img-center {
+        grid-area: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
+
+        background-image: url("../imgs/SweterNaranja-Hero.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-img-right {
+        display: block;
+        grid-area: right;
+        background-image: url("../imgs/RemeraBlanca-Hero.jpg");
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #hero h1 {
+        padding-bottom: 20px;
+        font-family: "LemonMedium";
+        letter-spacing: 5px;
+    }
+
+    #hero p {
+        padding-bottom: 50px;
+        font-family: "LemonLight";
+        letter-spacing: 3px;
+        margin: 0;
+    }
+
+    #hero button {
+        width: min(300px, 90%);
+        height: min(50px);
+        padding: 10px;
+        font-size: 20px;
+        background-color: $green-dark;
+        color: $white;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #hero button:hover {
+        background-color:$green-medium;
+        box-shadow: 0px 5px 5px 0px $black-overlay;
+    }
+
+    /* Main content - Destacados*/
+    #destacados {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        color: $white;
+        display: grid;
+        background-color: transparent;
+    }
+
+    #destacados h2 {
+        background-color: $accent;
+        color: $white;
+        font-size: 25px;
+        display: flex;
+    }
+
+    /*Div productos destacados */
+    .productos-destacados {
+        background-color: transparent;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        padding: clamp(16px, 4vw, 50px);
+        justify-items: center;
+    }
+
+    /*Card producto destacado */
+    .producto {
+        font-family: "LemonLight";
+        font-size: 1em;
+        background-color: $green-dark;
+        border: 1px solid black;
+        color: $white;
+
+        height: auto;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        gap: 50px;
+
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    .producto:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .product-data-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .producto img {
+        width: 100%;
+        height: clamp(220px, 30vw, 380px);
+        padding-bottom: 20px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .product-card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .product-card-footer button {
+        width: 60%;
+        word-break: normal;
+    }
+
+
+    #temporadas {
+        margin-top: 40px;
+        margin-bottom: 80px;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    #temporadas h2 {
+        background-color: $accent;
+        color: $white;
+        width: auto;
+        margin-left: 25px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .temporadas-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(620px, 1fr));
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Temporada Card */
+    .temporada {
+        width: 100%;
+        min-width: 0;
+        height: 350px;
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+
+        transition: 0.3s;
+        cursor: pointer;
+        border: 2px solid black;
+        background-color: $green-dark;
+    }
+
+    .temporada:hover {
+        background-color:$green-primary;
+        box-shadow: 10px 10px 5px 0px $black-overlay;
+    }
+
+    .temp-img-container {
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        flex: 0 0 50%;
+        min-width: 0;
+    }
+
+    .temp-img-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .temporada-texto-container {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        text-align: left;
+        gap: 20px;
+        min-width: 0;
+        width: auto;
+        padding: 20px;
+    }
+}

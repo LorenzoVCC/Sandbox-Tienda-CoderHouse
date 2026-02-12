@@ -1,0 +1,79 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+.products {
+    padding-top: 40px;
+}
+
+.products__filters-bar {
+    background-color: $accent;
+    color: $white;
+}
+
+.products__filters-form {
+    display: flex;
+    width: 100%;
+}
+
+.products__filter {
+    display: flex;
+    align-items: center;
+    $white-space: normal;
+}
+
+.products__select {
+    display: flex;
+    width: 50%;
+}
+
+/****************FIN FILTROS****************/
+.product-card {
+    height: 100%;
+    background-color: $green-dark;
+    transition: .3s;
+    color: $white;
+    text-align: left;
+}
+
+.product-card:hover {
+    background-color:$green-primary;
+    box-shadow: 3px 10px 5px 0px $black-overlay;
+}
+
+.card-img-top {
+    padding: 5px;
+}
+
+.card-text {
+    height: 100px;
+    overflow: hidden;
+}
+
+.product-card .btn {
+    background-color: $green-light;;
+    color: black;
+    border: none;
+    transition: .3s;
+    border-radius: 99px;
+    padding: 10px 20px;
+    margin-top: 0;
+}
+
+.product-card .btn:hover {
+    background-color: $accent;
+}
+
+/* "proximamente" */
+.products__coming-soon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 100px 0px;
+    background-color: $accent;
+}
+
+.products__coming-soon-title {
+    color: $white;
+    letter-spacing: 5px;
+}
