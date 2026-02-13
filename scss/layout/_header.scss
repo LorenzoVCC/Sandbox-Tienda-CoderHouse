@@ -23,10 +23,7 @@
 }
 
 .site-header__logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    @include flex-center(10px);
     letter-spacing: 6px;
     background-color: $accent;
     padding: 12px 16px;
@@ -56,14 +53,13 @@
 
 .site-header__nav ul {
     list-style: none;
-    display: flex;
+    @include flex-center(14px);
     flex-wrap: wrap;
     font-size: 12px;
-    gap: 14px;
-
     margin: 0;
     padding: 0;
 }
+
 
 .site-header__nav ul a {
     text-decoration: none;
@@ -77,23 +73,99 @@
 }
 
 .site-header__auth {
-    display: flex;
-    gap: 20px
+    @include flex-center(20px);
 }
 
 button {
     height: 40px;
-    padding: 10px;
     width: 100px;
-    border-radius: 20px;
-    cursor: pointer;
-    background-color: $white;
-    transition: .3s;
     font-family: "LemonLight";
     font-size: 12px;
+    @include button-base($white, #000);
+    border-radius: 20px;
+    padding: 10px;
 }
 
 button:hover {
-    background-color:$green-medium;
+    background-color: $accent;
     box-shadow: 0px 5px 5px 0px $black-overlay;
+}
+
+
+@include responsive(tablet) {
+
+    .site-header {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas: "logo menu";
+        padding: 16px 20px;
+        height: auto;
+        background-color: $green-dark;
+    }
+
+    .site-header__logo {
+        justify-content: flex-start;
+        padding: 12px 20px;
+    }
+
+    .site-header__nav {
+        display: grid;
+        justify-self: end;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .site-header__nav ul {
+        justify-content: flex-end;
+        gap: 22px;
+    }
+
+    .site-header__auth {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@include responsive(desktop) {
+
+    /*INDEX DESKTOP*/
+    main {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+    .site-header {
+        width: 100%;
+        background-color: $green-dark;
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        grid-template-areas: "logo menu";
+        align-items: center;
+        height: 140px;
+        padding: 10px;
+    }
+
+    .site-header__nav {
+        display: flex;
+        flex-direction: row;
+        justify-self: end;
+        justify-content: flex-end;
+        gap: 18px;
+    }
+
+    .site-header__nav ul {
+        justify-content: flex-end;
+        gap: 22px;
+    }
+
+    .site-header__auth {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }

@@ -61,7 +61,7 @@
 
 @media (min-width: 401px) and (max-width: 767px) {
     #contact-main {
-        /*flex-center*/
+        @include container;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -104,6 +104,7 @@
 
     .inputs-container {
         width: 100%;
+        margin-top: 20px;
     }
 
     .datos-contact {
@@ -123,7 +124,7 @@
 
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@include responsive(tablet) {
     #contact-main {
         /*flex-center*/
         padding: 40px;
@@ -162,12 +163,24 @@
 #contact-main h1 {
     /*Contacto*/
     background-color: $accent;
-    padding-left: 30px;
     color: $white;
     margin-bottom: 30px;
+    padding: 10px 30px;
+    width: 100%;
 }
 
-.contact-h1-container {
+.title-container {
+    @include flex-center;
+    flex-direction: column;
+}
+
+.title-container h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-p-container {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -238,7 +251,13 @@
 }
 
 .radiobtns-container button {
+    margin-top: 30px;
     width: 30%;
+    @include button-base($accent);
+}
+
+.radiobtns-container button :hover{
+    background: $white;
 }
 
 fieldset {

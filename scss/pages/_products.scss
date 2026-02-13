@@ -3,6 +3,7 @@
 
 .products {
     padding-top: 40px;
+    @include container;
 }
 
 .products__filters-bar {
@@ -26,22 +27,23 @@
     width: 50%;
 }
 
-/****************FIN FILTROS****************/
 .product-card {
     height: 100%;
-    background-color: $green-dark;
+    min-width: 300px;
     transition: .3s;
     color: $white;
     text-align: left;
+    @include card-base(12px);
 }
 
 .product-card:hover {
-    background-color:$green-primary;
+    background-color: $green-primary;
     box-shadow: 3px 10px 5px 0px $black-overlay;
 }
 
 .card-img-top {
     padding: 5px;
+    border-radius: 9px;
 }
 
 .card-text {
@@ -50,13 +52,10 @@
 }
 
 .product-card .btn {
-    background-color: $green-light;;
-    color: black;
-    border: none;
-    transition: .3s;
-    border-radius: 99px;
-    padding: 10px 20px;
     margin-top: 0;
+    width: 100%;
+    @include button-base($green-light, #000);
+    cursor: pointer;
 }
 
 .product-card .btn:hover {

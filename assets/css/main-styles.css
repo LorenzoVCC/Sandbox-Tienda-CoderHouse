@@ -18,8 +18,8 @@
 
 .site-header__logo {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 10px;
   letter-spacing: 6px;
   background-color: orange;
@@ -50,9 +50,11 @@
 .site-header__nav ul {
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
   flex-wrap: wrap;
   font-size: 12px;
-  gap: 14px;
   margin: 0;
   padding: 0;
 }
@@ -70,24 +72,104 @@
 
 .site-header__auth {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 
 button {
   height: 40px;
-  padding: 10px;
   width: 100px;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #fff;
-  transition: 0.3s;
   font-family: "LemonLight";
   font-size: 12px;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 button:hover {
-  background-color: rgb(85, 144, 113);
+  background-color: orange;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo menu";
+    padding: 16px 20px;
+    height: auto;
+    background-color: rgb(63, 124, 94);
+  }
+  .site-header__logo {
+    justify-content: flex-start;
+    padding: 12px 20px;
+  }
+  .site-header__nav {
+    display: grid;
+    justify-self: end;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+  .site-header__nav ul {
+    justify-content: flex-end;
+    gap: 22px;
+  }
+  .site-header__auth {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  /*INDEX DESKTOP*/
+  main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .site-header {
+    width: 100%;
+    background-color: rgb(63, 124, 94);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "logo menu";
+    align-items: center;
+    height: 140px;
+    padding: 10px;
+  }
+  .site-header__nav {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+  .site-header__nav ul {
+    justify-content: flex-end;
+    gap: 22px;
+  }
+  .site-header__auth {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 24px 0px 0;
 }
 
 #hero {
@@ -113,20 +195,24 @@ hr {
 
 .hero-img-center {
   grid-area: center;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
   background-image: url("../imgs/SweterNaranja-Hero.jpg");
   background-size: cover;
   background-position: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   font-size: 10px;
 }
 
 #hero h1 {
   font-family: "LemonMedium";
   letter-spacing: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 #hero p {
@@ -134,12 +220,19 @@ hr {
   letter-spacing: 3px;
 }
 
-#hero button {
+.btn-primary {
+  background-color: rgb(63, 124, 94);
+  color: rgb(255, 255, 255);
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: 0.5s;
   width: min(300px, 90%);
   font-size: 15px;
-  background-color: rgb(63, 124, 94);
-  color: #fff;
-  transition: 0.3s;
 }
 
 #hero button:hover {
@@ -154,22 +247,18 @@ hr {
 
 .title-flex {
   color: #fff;
+  width: auto;
   text-align: center;
   display: flex;
   justify-content: center;
 }
 
-.flexer {
-  background-color: orange;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  padding: 20px;
+.title-flex h2 {
+  width: auto;
 }
 
 /*Productos///////////////////////////////////////////////*/
 .productos-destacados {
-  width: 100%;
   gap: 20px;
   display: grid;
   justify-items: center;
@@ -178,18 +267,15 @@ hr {
 }
 
 .producto {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  transition: 0.3s;
+  color: #fff;
   text-align: left;
   background-color: rgb(63, 124, 94);
-  border: 1px solid black;
-  color: #fff;
-  gap: 40px;
-  transition: 0.3s;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   padding: 10px;
-  font-family: "LemonLight";
-  font-size: 10px;
-  cursor: pointer;
 }
 
 .producto:hover {
@@ -201,12 +287,14 @@ hr {
   width: 100%;
   overflow: hidden;
   background: #fff;
-  padding: 20px;
+}
+
+.product-name-container {
+  padding: 10px 0px;
 }
 
 .product-img-container img {
   width: 100%;
-  padding-bottom: 10px;
   display: block;
   align-self: center;
 }
@@ -215,7 +303,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto;
+  margin-top: 30px;
 }
 
 .product-card-footer button {
@@ -241,7 +329,6 @@ hr {
   color: #fff;
   width: auto;
   margin-bottom: 0px;
-  display: flex;
   justify-content: center;
   padding: 2px 20px;
 }
@@ -418,35 +505,7 @@ hr {
 /***********************************************
 FIN INDEX MOBILE
 *********************************************/
-@media (min-width: 768px) and (max-width: 1023px) {
-  .site-header {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    grid-template-areas: "logo menu";
-    padding: 16px 20px;
-    height: auto;
-    background-color: rgb(63, 124, 94);
-  }
-  .site-header__logo {
-    justify-content: flex-start;
-    padding: 12px 20px;
-  }
-  .site-header__nav {
-    display: grid;
-    justify-self: end;
-    justify-content: flex-end;
-    gap: 18px;
-  }
-  .site-header__nav ul {
-    justify-content: flex-end;
-    gap: 22px;
-  }
-  .site-header__auth {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+@media (min-width: 768px) {
   /* Hero */
   #hero {
     display: grid;
@@ -630,38 +689,6 @@ FIN INDEX MOBILE
 /********************************************************************************************/
 /*******************************************************************************/
 @media (min-width: 1024px) {
-  /*INDEX DESKTOP*/
-  main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .site-header {
-    width: 100%;
-    background-color: rgb(63, 124, 94);
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    grid-template-areas: "logo menu";
-    align-items: center;
-    height: 140px;
-    padding: 10px;
-  }
-  .site-header__nav {
-    flex-direction: row;
-    justify-self: end;
-    justify-content: flex-end;
-    gap: 18px;
-  }
-  .site-header__nav ul {
-    justify-content: flex-end;
-    gap: 22px;
-  }
-  .site-header__auth {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
   /* Main content - Hero*/
   #hero {
     display: grid;
@@ -726,6 +753,11 @@ FIN INDEX MOBILE
     background-color: rgb(85, 144, 113);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
   }
+  #destacados .flexer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
   /* Main content - Destacados*/
   #destacados {
     margin-top: 50px;
@@ -738,7 +770,9 @@ FIN INDEX MOBILE
     background-color: orange;
     color: #fff;
     font-size: 25px;
+    width: 25%;
     display: flex;
+    justify-content: center;
   }
   /*Div productos destacados */
   .productos-destacados {
@@ -858,6 +892,9 @@ FIN INDEX MOBILE
 }
 .products {
   padding-top: 40px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px 0px 0;
 }
 
 .products__filters-bar {
@@ -880,13 +917,17 @@ FIN INDEX MOBILE
   width: 50%;
 }
 
-/****************FIN FILTROS****************/
 .product-card {
   height: 100%;
-  background-color: rgb(63, 124, 94);
+  min-width: 300px;
   transition: 0.3s;
   color: #fff;
   text-align: left;
+  background-color: rgb(63, 124, 94);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
 }
 
 .product-card:hover {
@@ -896,6 +937,7 @@ FIN INDEX MOBILE
 
 .card-img-top {
   padding: 5px;
+  border-radius: 9px;
 }
 
 .card-text {
@@ -904,13 +946,19 @@ FIN INDEX MOBILE
 }
 
 .product-card .btn {
-  background-color: rgb(244, 247, 244);
-  color: black;
-  border: none;
-  transition: 0.3s;
-  border-radius: 99px;
-  padding: 10px 20px;
   margin-top: 0;
+  width: 100%;
+  background-color: rgb(244, 247, 244);
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 .product-card .btn:hover {
@@ -952,9 +1000,13 @@ FIN INDEX MOBILE
 }
 
 .branches__container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 16px 0px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 16px;
   margin-bottom: 80px;
 }
 
@@ -1013,18 +1065,24 @@ FIN INDEX MOBILE
 
 /* Historia //////////////////////////////////////////////////////////////////////////////////////////////////*/
 .history {
-  padding-top: 40px;
   color: #fff;
   font-family: "Caviar-Bold";
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 500px 0;
+  padding: 40px;
 }
 
 .history__title {
-  display: block;
   width: 100%;
   padding-left: 30px;
   background-color: orange;
   color: #fff;
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 /* CONTENEDOR GENERAL */
@@ -1165,7 +1223,9 @@ FIN INDEX MOBILE
 }
 @media (min-width: 401px) and (max-width: 767px) {
   #contact-main {
-    /*flex-center*/
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px 0px 0;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -1201,6 +1261,7 @@ FIN INDEX MOBILE
   }
   .inputs-container {
     width: 100%;
+    margin-top: 20px;
   }
   .datos-contact {
     color: #fff;
@@ -1215,7 +1276,7 @@ FIN INDEX MOBILE
     margin-top: 30px;
   }
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   #contact-main {
     /*flex-center*/
     padding: 40px;
@@ -1249,12 +1310,27 @@ FIN INDEX MOBILE
 #contact-main h1 {
   /*Contacto*/
   background-color: orange;
-  padding-left: 30px;
   color: #fff;
   margin-bottom: 30px;
+  padding: 10px 30px;
+  width: 100%;
 }
 
-.contact-h1-container {
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  flex-direction: column;
+}
+
+.title-container h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-p-container {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -1325,7 +1401,22 @@ FIN INDEX MOBILE
 }
 
 .radiobtns-container button {
+  margin-top: 30px;
   width: 30%;
+  background-color: orange;
+  color: rgb(255, 255, 255);
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.radiobtns-container button :hover {
+  background: #fff;
 }
 
 fieldset {
@@ -1363,7 +1454,9 @@ footer p {
 .footer-redes {
   grid-area: social-media;
   display: flex;
-  justify-self: end;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
 
 .footer-redes img {

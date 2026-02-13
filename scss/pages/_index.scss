@@ -1,6 +1,9 @@
 @use "../styles/variables" as *;
 @use "../styles/mixins" as *;
 
+main {
+    @include container(24px 0px);
+}
 
 #hero {
     display: grid;
@@ -25,21 +28,18 @@ hr {
 
 .hero-img-center {
     grid-area: center;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 80px;
-
     background-image: url("../imgs/SweterNaranja-Hero.jpg");
     background-size: cover;
     background-position: center center;
+    @include flex-center(12px);
     font-size: 10px;
 }
 
 #hero h1 {
     font-family: "LemonMedium";
     letter-spacing: 5px;
+    @include flex-center(100px);
 }
 
 #hero p {
@@ -47,16 +47,14 @@ hr {
     letter-spacing: 3px;
 }
 
-#hero button {
+.btn-primary {
+    @include button-base($green-dark);
     width: min(300px, 90%);
     font-size: 15px;
-    background-color: $green-dark;
-    color: $white;
-    transition: .3s;
 }
 
 #hero button:hover {
-    background-color:$green-medium;
+    background-color: $green-medium;
     box-shadow: 0px 5px 5px 0px $black-overlay;
 }
 
@@ -68,22 +66,18 @@ hr {
 
 .title-flex {
     color: $white;
+    width: auto;
     text-align: center;
     display: flex;
     justify-content: center;
 }
 
-.flexer {
-    background-color: $accent;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
+.title-flex h2 {
+    width: auto;
+} 
 
 /*Productos///////////////////////////////////////////////*/
 .productos-destacados {
-    width: 100%;
     gap: 20px;
     display: grid;
     justify-items: center;
@@ -92,26 +86,15 @@ hr {
 }
 
 .producto {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-
-    background-color: $green-dark;
-    border: 1px solid black;
-    color: $white;
-    gap: 40px;
-
+    height: 100%;
     transition: .3s;
-    padding: 10px;
-
-    font-family: "LemonLight";
-    font-size: 10px;
-
-    cursor: pointer;
+    color: $white;
+    text-align: left;
+    @include card-base(12px);
 }
 
 .producto:hover {
-    background-color:$green-primary;
+    background-color: $green-primary;
     box-shadow: 10px 10px 5px 0px $black-overlay;
 }
 
@@ -119,12 +102,14 @@ hr {
     width: 100%;
     overflow: hidden;
     background: $white;
-    padding: 20px;
+}
+
+.product-name-container {
+    padding: 10px 0px;
 }
 
 .product-img-container img {
     width: 100%;
-    padding-bottom: 10px;
     display: block;
     align-self: center;
 }
@@ -133,7 +118,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: auto;
+    margin-top: 30px;
 }
 
 .product-card-footer button {
@@ -160,7 +145,6 @@ hr {
     color: $white;
     width: auto;
     margin-bottom: 0px;
-    display: flex;
     justify-content: center;
     padding: 2px 20px;
 }
@@ -185,7 +169,7 @@ hr {
 }
 
 .temporada:hover {
-    background-color:$green-primary;
+    background-color: $green-primary;
     box-shadow: 10px 10px 5px 0px $black-overlay;
 }
 
@@ -259,7 +243,7 @@ hr {
     }
 
     .producto:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
@@ -337,7 +321,7 @@ hr {
     }
 
     .temporada:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
@@ -361,40 +345,7 @@ hr {
 FIN INDEX MOBILE
 *********************************************/
 
-@media (min-width: 768px) and (max-width: 1023px) {
-
-    .site-header {
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        grid-template-areas: "logo menu";
-        padding: 16px 20px;
-        height: auto;
-        background-color: $green-dark;
-    }
-
-    .site-header__logo {
-        justify-content: flex-start;
-        padding: 12px 20px;
-    }
-
-    .site-header__nav {
-        display: grid;
-        justify-self: end;
-        justify-content: flex-end;
-        gap: 18px;
-    }
-
-    .site-header__nav ul {
-        justify-content: flex-end;
-        gap: 22px;
-    }
-
-    .site-header__auth {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@include responsive(tablet) {
 
     /* Hero */
     #hero {
@@ -457,7 +408,7 @@ FIN INDEX MOBILE
     }
 
     #hero button:hover {
-        background-color:$green-medium;
+        background-color: $green-medium;
         box-shadow: 0px 5px 5px 0px $black-overlay;
     }
 
@@ -516,7 +467,7 @@ FIN INDEX MOBILE
     }
 
     .producto:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
@@ -586,7 +537,7 @@ FIN INDEX MOBILE
     }
 
     .temporada:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
@@ -614,45 +565,7 @@ FIN INDEX MOBILE
 /********************************************************************************************/
 /*******************************************************************************/
 
-@media (min-width: 1024px) {
-
-    /*INDEX DESKTOP*/
-    main {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-
-
-    .site-header {
-        width: 100%;
-        background-color: $green-dark;
-        display: grid;
-        grid-template-columns: auto minmax(0, 1fr);
-        grid-template-areas: "logo menu";
-        align-items: center;
-        height: 140px;
-        padding: 10px;
-    }
-
-    .site-header__nav {
-        flex-direction: row;
-        justify-self: end;
-        justify-content: flex-end;
-        gap: 18px;
-    }
-
-    .site-header__nav ul {
-        justify-content: flex-end;
-        gap: 22px;
-    }
-
-    .site-header__auth {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@include responsive(desktop) {
 
     /* Main content - Hero*/
     #hero {
@@ -723,8 +636,14 @@ FIN INDEX MOBILE
     }
 
     #hero button:hover {
-        background-color:$green-medium;
+        background-color: $green-medium;
         box-shadow: 0px 5px 5px 0px $black-overlay;
+    }
+
+    #destacados .flexer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
 
     /* Main content - Destacados*/
@@ -740,7 +659,9 @@ FIN INDEX MOBILE
         background-color: $accent;
         color: $white;
         font-size: 25px;
+        width: 25%;
         display: flex;
+        justify-content: center;
     }
 
     /*Div productos destacados */
@@ -775,7 +696,7 @@ FIN INDEX MOBILE
     }
 
     .producto:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
@@ -847,7 +768,7 @@ FIN INDEX MOBILE
     }
 
     .temporada:hover {
-        background-color:$green-primary;
+        background-color: $green-primary;
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 

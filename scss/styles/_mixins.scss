@@ -3,3 +3,60 @@
   justify-content: space-between;
   align-items: center;
 }
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin button-base($bg, $color: rgb(255, 255, 255)) {
+  background-color: $bg;
+  color: $color;
+  padding: 12px 24px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: .5s;
+} 
+
+@mixin container($padding: 16px 0px) {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: $padding 0;
+}
+
+@mixin card-base($radius: 12px) {
+  background-color: rgb(63, 124, 94);
+  border-radius: $radius;
+  box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  overflow: hidden;
+  padding: 10px;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+@mixin grid-cards-simple($gap: 1.5rem) {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $gap;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
