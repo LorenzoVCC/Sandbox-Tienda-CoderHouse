@@ -36,6 +36,7 @@ hr {
     font-size: 10px;
 }
 
+
 #hero h1 {
     font-family: "LemonMedium";
     letter-spacing: 5px;
@@ -47,10 +48,19 @@ hr {
     letter-spacing: 3px;
 }
 
+.novedades-container {
+
+    width: 50%;
+}
+
+.coleccion {
+    text-decoration: none;
+    width: 100%
+}
+
 .btn-primary {
     @include button-base($green-dark);
     width: min(300px, 90%);
-    font-size: 15px;
 }
 
 #hero button:hover {
@@ -65,6 +75,7 @@ hr {
 }
 
 .title-flex {
+    margin-top: 50px;
     color: $white;
     width: auto;
     text-align: center;
@@ -72,9 +83,10 @@ hr {
     justify-content: center;
 }
 
-.title-flex h2 {
-    width: auto;
-} 
+.destacados h2 {
+    width: 35%;
+    background-color: $accent;
+}
 
 /*Productos///////////////////////////////////////////////*/
 .productos-destacados {
@@ -90,7 +102,7 @@ hr {
     transition: .3s;
     color: $white;
     text-align: left;
-    @include card-base(12px);
+    @include card-base(20px, 10px);
 }
 
 .producto:hover {
@@ -102,23 +114,27 @@ hr {
     width: 100%;
     overflow: hidden;
     background: $white;
-}
-
-.product-name-container {
-    padding: 10px 0px;
+    border-radius: 10px;
+    aspect-ratio: 4 / 3;
 }
 
 .product-img-container img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
-    align-self: center;
+}
+
+.product-name-container {
+    margin-top: 20px;
 }
 
 .product-card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .product-card-footer button {
@@ -253,11 +269,11 @@ hr {
     }
 
     .product-data-container img {
-        height: 150px;
         width: 100%;
-        padding-bottom: 10px;
+        height: 100%;
+        object-fit: cover;
         display: block;
-        align-self: center;
+        padding-bottom: 0;
     }
 
     .product-card-footer {
@@ -417,7 +433,7 @@ FIN INDEX MOBILE
 
     /* Main content - Destacados*/
     .destacados {
-        margin-top: 50px;
+        margin-top: 1px;
         margin-bottom: 30px;
         color: $white;
         background-color: transparent;
@@ -432,6 +448,7 @@ FIN INDEX MOBILE
     }
 
     .destacados h2 {
+        background-color: $accent;
         color: $white;
         width: 340px;
         padding: 5px;
@@ -450,18 +467,17 @@ FIN INDEX MOBILE
     /*Card producto destacado */
     .producto {
         font-family: "LemonLight";
-        background-color: $green-dark;
+        @include card-base(20px, 15px);
         border: 1px solid black;
         color: $white;
         font-size: 15px;
 
         height: auto;
         width: auto;
-        padding: 20px;
 
         display: flex;
         flex-direction: column;
-        gap: 50px;
+        // gap: 50px;
         transition: .3s;
         cursor: pointer;
     }
@@ -471,24 +487,29 @@ FIN INDEX MOBILE
         box-shadow: 10px 10px 5px 0px $black-overlay;
     }
 
-    .producto img {
-        height: 300px;
-        padding-bottom: 20px;
-        object-fit: cover;
-        display: block;
+    // .producto img {
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     display: block;
+    // }
+
+    .product-name-container {
+        margin-top: 20px;
     }
 
     .product-card-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 80px;
     }
 
     .product-card-footer button {
         width: 50%;
         font-size: 10px;
     }
+
 
 
     /*******************/
@@ -575,7 +596,7 @@ FIN INDEX MOBILE
         transition: .5s;
         width: 100%;
         height: clamp(320px, 50vh, 520px);
-        /*     margin-top: 50px;*/
+
         color: $white;
     }
 
@@ -652,7 +673,6 @@ FIN INDEX MOBILE
         margin-bottom: 30px;
         color: $white;
         display: grid;
-        background-color: transparent;
     }
 
     .destacados h2 {
@@ -661,6 +681,7 @@ FIN INDEX MOBILE
         font-size: 25px;
         width: 25%;
         display: flex;
+        margin-top: 30px;
         justify-content: center;
     }
 
@@ -678,15 +699,13 @@ FIN INDEX MOBILE
     .producto {
         font-family: "LemonLight";
         font-size: 1em;
-        background-color: $green-dark;
         border: 1px solid black;
         color: $white;
-
+        @include card-base(20px, 20px);
         height: auto;
         width: 100%;
         max-width: 500px;
-        padding: 20px;
-        gap: 50px;
+        // gap: 50px;
 
         display: flex;
         flex-direction: column;
@@ -705,19 +724,27 @@ FIN INDEX MOBILE
         flex-direction: column;
     }
 
-    .producto img {
-        width: 100%;
-        height: clamp(220px, 30vw, 380px);
-        padding-bottom: 20px;
-        object-fit: cover;
-        display: block;
+    // .product-img-container {
+    //     width: 100%;
+    //     overflow: hidden;
+    //     border-radius: 10px;
+    //     aspect-ratio: 4 / 3;
+    // }
+
+    // .product-img-container img {
+    //     width: 50%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     object-position: center;
+    //     display: block;
+    // }
+
+    .product-name-container {
+        margin-top: 20px;
     }
 
     .product-card-footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: auto;
+        margin-top: 80px;
     }
 
     .product-card-footer button {
@@ -733,6 +760,7 @@ FIN INDEX MOBILE
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        
     }
 
     #temporadas h2 {
@@ -773,11 +801,11 @@ FIN INDEX MOBILE
     }
 
     .temp-img-container {
-        width: 50%;
-        height: 100%;
         overflow: hidden;
-        flex: 0 0 50%;
-        min-width: 0;
+        height: 100%;
+        width: 50%;
+        padding: 10px;
+        
     }
 
     .temp-img-container img {

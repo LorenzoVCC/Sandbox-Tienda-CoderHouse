@@ -22,6 +22,7 @@
   transition: background-color 0.3s ease;
   text-align: center;
   transition: .5s;
+  font-size: 10px;
 } 
 
 @mixin container($padding: 16px 0px) {
@@ -30,12 +31,13 @@
   padding: $padding 0;
 }
 
-@mixin card-base($radius: 12px) {
+@mixin card-base($radius: 12px, $padding: 20px) {
   background-color: rgb(63, 124, 94);
   border-radius: $radius;
   box-shadow: 0 4px 10px rgba(0,0,0,.1);
   overflow: hidden;
-  padding: 10px;
+  padding: $padding;
+  cursor: pointer;
 }
 
 @mixin responsive($breakpoint) {

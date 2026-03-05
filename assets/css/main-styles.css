@@ -77,7 +77,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  letter-spacing: 6px;
+  letter-spacing: 10px;
   background-color: orange;
   padding: 12px 16px;
 }
@@ -148,6 +148,7 @@ button {
   transition: background-color 0.3s ease;
   text-align: center;
   transition: 0.5s;
+  font-size: 10px;
   border-radius: 20px;
   padding: 10px;
 }
@@ -203,6 +204,10 @@ button:hover {
     align-items: center;
     height: 140px;
     padding: 10px;
+  }
+  .site-header__logo {
+    justify-content: flex-start;
+    padding: 12px 20px;
   }
   .site-header__nav {
     display: flex;
@@ -276,6 +281,15 @@ hr {
   letter-spacing: 3px;
 }
 
+.novedades-container {
+  width: 50%;
+}
+
+.coleccion {
+  text-decoration: none;
+  width: 100%;
+}
+
 .btn-primary {
   background-color: rgb(63, 124, 94);
   color: rgb(255, 255, 255);
@@ -287,8 +301,8 @@ hr {
   transition: background-color 0.3s ease;
   text-align: center;
   transition: 0.5s;
+  font-size: 10px;
   width: min(300px, 90%);
-  font-size: 15px;
 }
 
 #hero button:hover {
@@ -302,6 +316,7 @@ hr {
 }
 
 .title-flex {
+  margin-top: 50px;
   color: #fff;
   width: auto;
   text-align: center;
@@ -309,8 +324,9 @@ hr {
   justify-content: center;
 }
 
-.title-flex h2 {
-  width: auto;
+.destacados h2 {
+  width: 35%;
+  background-color: orange;
 }
 
 /*Productos///////////////////////////////////////////////*/
@@ -328,10 +344,11 @@ hr {
   color: #fff;
   text-align: left;
   background-color: rgb(63, 124, 94);
-  border-radius: 12px;
+  border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 10px;
+  cursor: pointer;
 }
 
 .producto:hover {
@@ -343,23 +360,27 @@ hr {
   width: 100%;
   overflow: hidden;
   background: #fff;
-}
-
-.product-name-container {
-  padding: 10px 0px;
+  border-radius: 10px;
+  aspect-ratio: 4/3;
 }
 
 .product-img-container img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  align-self: center;
+}
+
+.product-name-container {
+  margin-top: 20px;
 }
 
 .product-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 .product-card-footer button {
@@ -483,11 +504,11 @@ hr {
     flex-direction: column;
   }
   .product-data-container img {
-    height: 150px;
     width: 100%;
-    padding-bottom: 10px;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    align-self: center;
+    padding-bottom: 0;
   }
   .product-card-footer {
     display: flex;
@@ -620,7 +641,7 @@ FIN INDEX MOBILE
   /*******************/
   /* Main content - Destacados*/
   .destacados {
-    margin-top: 50px;
+    margin-top: 1px;
     margin-bottom: 30px;
     color: #fff;
     background-color: transparent;
@@ -633,6 +654,7 @@ FIN INDEX MOBILE
     justify-content: center;
   }
   .destacados h2 {
+    background-color: orange;
     color: #fff;
     width: 340px;
     padding: 5px;
@@ -650,15 +672,18 @@ FIN INDEX MOBILE
   .producto {
     font-family: "LemonLight";
     background-color: rgb(63, 124, 94);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+    cursor: pointer;
     border: 1px solid black;
     color: #fff;
     font-size: 15px;
     height: auto;
     width: auto;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
     transition: 0.3s;
     cursor: pointer;
   }
@@ -666,17 +691,14 @@ FIN INDEX MOBILE
     background-color: rgb(111, 176, 142);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  .producto img {
-    height: 300px;
-    padding-bottom: 20px;
-    object-fit: cover;
-    display: block;
+  .product-name-container {
+    margin-top: 20px;
   }
   .product-card-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 80px;
   }
   .product-card-footer button {
     width: 50%;
@@ -753,7 +775,6 @@ FIN INDEX MOBILE
     transition: 0.5s;
     width: 100%;
     height: clamp(320px, 50vh, 520px);
-    /*     margin-top: 50px;*/
     color: #fff;
   }
   .hero-img-left {
@@ -820,7 +841,6 @@ FIN INDEX MOBILE
     margin-bottom: 30px;
     color: #fff;
     display: grid;
-    background-color: transparent;
   }
   .destacados h2 {
     background-color: orange;
@@ -828,6 +848,7 @@ FIN INDEX MOBILE
     font-size: 25px;
     width: 25%;
     display: flex;
+    margin-top: 30px;
     justify-content: center;
   }
   /*Div productos destacados */
@@ -843,14 +864,17 @@ FIN INDEX MOBILE
   .producto {
     font-family: "LemonLight";
     font-size: 1em;
-    background-color: rgb(63, 124, 94);
     border: 1px solid black;
     color: #fff;
+    background-color: rgb(63, 124, 94);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    cursor: pointer;
     height: auto;
     width: 100%;
     max-width: 500px;
-    padding: 20px;
-    gap: 50px;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -865,18 +889,11 @@ FIN INDEX MOBILE
     display: flex;
     flex-direction: column;
   }
-  .producto img {
-    width: 100%;
-    height: clamp(220px, 30vw, 380px);
-    padding-bottom: 20px;
-    object-fit: cover;
-    display: block;
+  .product-name-container {
+    margin-top: 20px;
   }
   .product-card-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: auto;
+    margin-top: 80px;
   }
   .product-card-footer button {
     width: 60%;
@@ -923,11 +940,10 @@ FIN INDEX MOBILE
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   }
   .temp-img-container {
-    width: 50%;
-    height: 100%;
     overflow: hidden;
-    flex: 0 0 50%;
-    min-width: 0;
+    height: 100%;
+    width: 50%;
+    padding: 10px;
   }
   .temp-img-container img {
     width: 100%;
@@ -983,7 +999,8 @@ FIN INDEX MOBILE
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 10px;
+  padding: 20px;
+  cursor: pointer;
 }
 
 .product-card:hover {
@@ -991,14 +1008,21 @@ FIN INDEX MOBILE
   box-shadow: 3px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card-img-top {
-  padding: 5px;
-  border-radius: 9px;
+.product-card__image-container {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.product-card__image-container .card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .card-text {
-  height: 100px;
-  overflow: hidden;
+  font-size: 0.8em;
 }
 
 .product-card .btn {
@@ -1014,6 +1038,7 @@ FIN INDEX MOBILE
   transition: background-color 0.3s ease;
   text-align: center;
   transition: 0.5s;
+  font-size: 10px;
   cursor: pointer;
 }
 
@@ -1230,146 +1255,21 @@ FIN INDEX MOBILE
   padding: 2px 6px;
 }
 
-/* Contact ////////////////////////////////////////////////////////////////////////*/
-/* Contenedores generales */
-@media (max-width: 400px) {
-  #contact-main {
-    /*flex-center*/
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  .title-container {
-    padding: 20px;
-  }
-  #contact-main h1 {
-    /*Contacto*/
-    background-color: orange;
-    color: #fff;
-    text-align: center;
-  }
-  .contact-h1-container {
-    display: flex;
-    color: #fff;
-  }
-  #completeFormText {
-    /*completa el formulario....*/
-    color: #fff;
-  }
-  .formulario-contacto {
-    justify-content: center;
-    align-items: center;
-  }
-  #form-contact {
-    background-color: rgb(63, 124, 94);
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .datos-contact {
-    color: #fff;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-  }
-}
-@media (min-width: 401px) and (max-width: 767px) {
-  #contact-main {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 16px 0px 0;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  .title-container {
-    padding: 20px;
-  }
-  #contact-main h1 {
-    /*Contacto*/
-    background-color: orange;
-    color: #fff;
-    text-align: center;
-  }
-  .contact-h1-container {
-    display: flex;
-    color: #fff;
-  }
-  #completeFormText {
-    /*completa el formulario....*/
-    color: #fff;
-  }
-  .formulario-contacto {
-    justify-content: center;
-    align-items: center;
-  }
-  #form-contact {
-    background-color: orange;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .inputs-container {
-    width: 100%;
-    margin-top: 20px;
-  }
-  .datos-contact {
-    color: #fff;
-    gap: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-  }
-  .radiobtns-container {
-    width: 100%;
-    margin-top: 30px;
-  }
-}
-@media (min-width: 768px) {
-  #contact-main {
-    /*flex-center*/
-    padding: 40px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-  }
-  #contact-main h1 {
-    /*Contacto*/
-    background-color: orange;
-    color: #fff;
-    text-align: center;
-  }
-  .contact-h1-container {
-    display: flex;
-    color: #fff;
-  }
-  #completeFormText {
-    /*completa el formulario....*/
-    color: #fff;
-  }
-}
 #contact-main {
-  /*flex-center*/
   padding-top: 40px;
-  text-align: left;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
 #contact-main h1 {
-  /*Contacto*/
   background-color: orange;
   color: #fff;
   margin-bottom: 30px;
   padding: 10px 30px;
   width: 100%;
+  text-align: center;
 }
 
 .title-container {
@@ -1394,27 +1294,25 @@ FIN INDEX MOBILE
 }
 
 #contact-main p {
-  /*completa el formulario....*/
   background-color: orange;
 }
 
-/* Container de form */
 .formulario-contacto {
   display: flex;
   justify-content: center;
+  width: 100%;
   margin-bottom: 70px;
 }
 
-/* <Form> */
 #form-contact {
   width: 90%;
   max-width: 600px;
-  height: 650px;
   background-color: rgb(63, 124, 94);
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 20px;
 }
 
 .inputs-container {
@@ -1423,31 +1321,29 @@ FIN INDEX MOBILE
   gap: 20px;
 }
 
-/* INPUTS PARA EL USER */
 .datos-contact {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  gap: 15px;
   padding: 10px;
   color: #fff;
 }
 
-.datos-contact input {
-  height: 1.8rem;
-  width: 60%;
-  border: 1px solid black;
-}
-
-.datos-contact textarea {
-  width: 60%;
-  border: 1px solid black;
-}
-
 .datos-contact label {
-  width: 20%;
+  width: 120px;
   padding-left: 5px;
 }
 
-/* Radio Buttons */
+.datos-contact input,
+.datos-contact textarea {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.datos-contact input {
+  height: 1.8rem;
+}
+
 .radiobtns-container {
   display: flex;
   gap: 20px;
@@ -1458,7 +1354,7 @@ FIN INDEX MOBILE
 
 .radiobtns-container button {
   margin-top: 30px;
-  width: 30%;
+  width: 200px;
   background-color: orange;
   color: rgb(255, 255, 255);
   padding: 12px 24px;
@@ -1469,15 +1365,17 @@ FIN INDEX MOBILE
   transition: background-color 0.3s ease;
   text-align: center;
   transition: 0.5s;
+  font-size: 10px;
 }
 
-.radiobtns-container button :hover {
+.radiobtns-container button:hover {
   background: #fff;
 }
 
 fieldset {
   color: #fff;
-  width: 80%;
+  width: 100%;
+  max-width: 520px;
   padding: 10px;
 }
 
@@ -1486,6 +1384,50 @@ legend {
   padding-right: 10px;
 }
 
+@media (max-width: 400px) {
+  #contact-main {
+    text-align: left;
+  }
+  .title-container {
+    padding: 20px;
+  }
+  #form-contact {
+    align-items: stretch;
+  }
+  .datos-contact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .datos-contact label {
+    width: 100%;
+  }
+}
+@media (min-width: 401px) and (max-width: 767px) {
+  #contact-main {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 16px 0px 0;
+    text-align: left;
+  }
+  .title-container {
+    padding: 20px;
+  }
+  .inputs-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .radiobtns-container {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+@media (min-width: 768px) {
+  #contact-main {
+    padding: 40px;
+    text-align: left;
+  }
+}
 /* Footer - MOBILE */
 footer {
   display: grid;
@@ -1587,7 +1529,7 @@ footer p {
     max-width: 320px;
     border-radius: 20px;
     border: none;
-    padding: 10px;
+    padding-left: 15px;
   }
   .footer-contacto button {
     width: 100px;
