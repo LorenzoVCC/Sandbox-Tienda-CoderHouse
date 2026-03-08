@@ -1086,9 +1086,8 @@ FIN INDEX MOBILE
 .branches__title {
   background-color: orange;
   color: #fff;
-  text-align: left;
-  margin-bottom: 30px;
-  padding-left: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .branches__container {
@@ -1104,7 +1103,6 @@ FIN INDEX MOBILE
 
 .branches__item {
   border: 2px solid lightgray;
-  margin-top: 30px;
   width: 80%;
   display: flex;
   cursor: pointer;
@@ -1141,6 +1139,12 @@ FIN INDEX MOBILE
   background-position: center;
   background-repeat: no-repeat;
   min-height: 300px;
+  display: none;
+}
+@media (min-width: 1024px) {
+  .branches__image {
+    display: block;
+  }
 }
 
 .branches__image--1 {

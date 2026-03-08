@@ -8,9 +8,8 @@
 .branches__title {
     background-color: $accent;
     color: $white;
-    text-align: left;
-    margin-bottom: 30px;
-    padding-left: 30px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .branches__container {
@@ -21,7 +20,6 @@
 
 .branches__item {
     border: 2px solid lightgray;
-    margin-top: 30px;
     width: 80%;
     display: flex;
     cursor: pointer;
@@ -58,6 +56,12 @@
     background-position: center;
     background-repeat: no-repeat;
     min-height: 300px;
+
+    display: none;
+
+    @include responsive(desktop) {
+        display: block;
+    }
 }
 
 .branches__image--1 {
