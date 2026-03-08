@@ -48,13 +48,14 @@
 }
 
 #form-contact {
-  width: 90%;
+  width: 100%;
   max-width: 600px;
   background-color: $green-dark;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 30px;
   padding: 20px;
 }
 
@@ -110,6 +111,25 @@ fieldset {
   width: 100%;
   max-width: 520px;
   padding: 10px;
+  border: 1px solid lightgray;
+}
+
+.motivo-radiobtns {
+  display: flex;
+  flex-direction: column;
+}
+
+.motivo-radiobtns label {
+  padding-left: 10px;
+}
+
+.preferencias-radiobtns {
+  display: flex;
+  flex-direction: column;
+}
+
+.preferencias-radiobtns label {
+  padding-left: 10px;
 }
 
 legend {

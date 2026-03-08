@@ -20,7 +20,7 @@
             <a href="../index.html">
                 <div class="site-header__logo">
                     <img src="../assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
-                    <h2>Sandvox</h2>
+                    <span class="logo">Sandvox</span>
                 </div>
             </a>
             <!-- ----------------------------------------------------------------------- -->
@@ -63,36 +63,35 @@
                 <div class="inputs-container">
 
                     <div class="datos-contact">
-                        <label for="nombre">Nombre</label><br>
+                        <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
 
                     <div class="datos-contact">
-                        <label for="email">Email</label><br>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="datos-contact">
-                        <label for="mensaje">Mensaje</label><br>
+                        <label for="mensaje">Mensaje</label>
                         <textarea id="mensaje" name="mensaje" rows="5"></textarea>
                     </div>
                 </div>
 
-                <br>
                 <div class="radiobtns-container">
 
-                    <fieldset>
+                    <fieldset class="motivo-radiobtns">
                         <legend>Motivo de contacto</legend>
 
                         <label>
                             <input type="radio" name="motivo" value="consulta">
                             Consulta
-                        </label><br>
+                        </label>
 
                         <label>
                             <input type="radio" name="motivo" value="reclamo">
                             Reclamo
-                        </label><br>
+                        </label>
 
                         <label>
                             <input type="radio" name="motivo" value="sugerencia">
@@ -100,13 +99,13 @@
                         </label>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset class="preferencias-radiobtns">
                         <legend>Preferencias</legend>
 
                         <label>
                             <input type="checkbox" name="newsletter">
                             Quiero recibir novedades
-                        </label><br>
+                        </label>
 
                         <label>
                             <input type="checkbox" name="terminos" required>

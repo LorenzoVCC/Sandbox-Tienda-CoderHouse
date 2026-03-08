@@ -7,10 +7,9 @@
     <title>Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        
+
     <link rel="stylesheet" href="../assets/css/main-styles.css">
 </head>
-<!--------  -->
 
 <body>
     <header>
@@ -19,10 +18,10 @@
             <a href="../index.html">
                 <div class="site-header__logo">
                     <img src="../assets/imgs/MainLogo-HeaderWhite.png" alt="Logo de Nombre">
-                    <h2>Sandvox</h2>
+                    <span class="logo">Sandvox</span>
                 </div>
             </a>
-            <!-- ----------------------------------------------------------------------- -->
+
             <div class="site-header__nav">
                 <nav aria-label="main-nav">
                     <ul>
@@ -41,10 +40,8 @@
         </div>
     </header>
 
-
     <main class="products">
 
-        <!-- ////////////////////////////////////////// -->
         <div
             class="products__filters-bar d-flex flex-column flex-lg-row align-items-center align-items-lg-center justify-content-between gap-3 p-3">
 
@@ -78,83 +75,98 @@
             </section>
         </div>
 
-        <!-- /////////////////////////////////////////////   -->
-
-        <section class="products__list row g-4 mt-4 px-3">
+        <section class="products__list row g-4 mt-4" aria-labelledby="products-list-title">
+            <h2 id="products-list-title" class="visually-hidden">Lista de productos</h2>
 
             <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 d-flex">
                 <div class="product-card card h-100 w-100">
 
                     <div class="product-card__image-container">
-                        <img src="../assets/imgs/imgs productos/Conjunto Verde-Naranja.jpg" class="card-img-top" alt="Conjunto NARANJA Y VERDE">
+                        <img src="../assets/imgs/imgs productos/Conjunto Verde-Naranja.jpg" class="card-img-top"
+                            alt="Conjunto naranja y verde">
                     </div>
 
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Conjunto SandVox</h5>
-                        <p class="card-text"> Estética inspirada en la naturaleza. Ideal para uso diario o salidas informales.</p>
-                        <a href="#" class="btn btn-primary mt-auto">Agregar al carrito</a>
+                    <div class="card-body product-card__body">
+                        <h3 class="card-title">Conjunto SandVox</h3>
+                        <p class="card-text">
+                            Estética inspirada en la naturaleza. Ideal para uso diario o salidas informales.
+                        </p>
+                        <div class="product-card__button-container">
+                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
             <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 d-flex">
                 <div class="product-card card h-100 w-100">
 
                     <div class="product-card__image-container">
-                        <img src="../assets/imgs/imgs productos/Sweater SandVox.jpg" class="card-img-top" alt="Sweater VERDE Sandvox">
+                        <img src="../assets/imgs/imgs productos/Sweater SandVox.jpg" class="card-img-top"
+                            alt="Sweater verde Sandvox">
                     </div>
 
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Sweater SandVox</h5>
-                        <p class="card-text"> Tejido clásico de textura trenzada. Ideal para un look cómodo y minimalista en días frescos. </p>
-                        <a href="#" class="btn btn-primary mt-auto">Agregar al carrito</a>
+                    <div class="card-body product-card__body">
+                        <h3 class="card-title">Sweater SandVox</h3>
+                        <p class="card-text">
+                            Tejido clásico de textura trenzada. Ideal para un look cómodo y minimalista en días frescos.
+                        </p>
+                        <div class="product-card__button-container">
+                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
             <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 d-flex">
                 <div class="product-card card h-100 w-100">
 
                     <div class="product-card__image-container">
-                        <img src="../assets/imgs/imgs productos/moonlainn.jpg" class="card-img-top" alt="Moonlainn">
+                        <img src="../assets/imgs/imgs productos/moonlainn.jpg" class="card-img-top"
+                            alt="Remera Moonlainn">
                     </div>
 
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Remera Moonlainn</h5>
-                        <p class="card-text"> Estética natural con ilustración botánica. Ideal para un look relajado y urbano inspirado en la naturaleza. </p>
-                        <a href="#" class="btn btn-primary mt-auto">Agregar al carrito</a>
+                    <div class="card-body product-card__body">
+                        <h3 class="card-title">Remera Moonlainn</h3>
+                        <p class="card-text">
+                            Estética natural con ilustración botánica. Ideal para un look relajado y urbano inspirado en la naturaleza.
+                        </p>
+                        <div class="product-card__button-container">
+                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            
             <div class="col-12 col-sm-6 col-lg-4 col-xxl-3 d-flex">
                 <div class="product-card card h-100 w-100">
 
                     <div class="product-card__image-container">
-                        <img src="../assets/imgs/imgs productos/remera-waves.jpg" class="card-img-top" alt="Waves">
+                        <img src="../assets/imgs/imgs productos/remera-waves.jpg" class="card-img-top"
+                            alt="Remera Waves">
                     </div>
 
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">Remera Waves</h5>
-                        <p class="card-text"> Diseño gráfico inspirado en el mar. Perfecta para un estilo fresco y veraniego con vibra surf. </p>
-                        <a href="#" class="btn btn-primary mt-auto">Agregar al carrito</a>
+                    <div class="card-body product-card__body">
+                        <h3 class="card-title">Remera Waves</h3>
+                        <p class="card-text">
+                            Diseño gráfico inspirado en el mar. Perfecta para un estilo fresco y veraniego con vibra surf.
+                        </p>
+                        <div class="product-card__button-container">
+                            <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
         </section>
 
-        <div class="products__coming-soon text-center">
-            <h3 class="products__coming-soon-title">
-                Proximamente habrá mas productos... simulando como queda
-            </h3>
-        </div>
+        <section class="products__coming-soon text-center" aria-labelledby="coming-soon-title">
+            <h2 id="coming-soon-title" class="products__coming-soon-title">
+                Próximamente habrá más productos... simulando cómo queda
+            </h2>
+        </section>
 
     </main>
-
 
     <footer>
         <p>© 2025 LVecchia. Todos los derechos reservados.</p>

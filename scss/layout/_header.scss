@@ -1,7 +1,6 @@
 @use "../styles/variables" as *;
 @use "../styles/mixins" as *;
 
-
 .site-header {
     height: auto;
     width: 100%;
@@ -12,12 +11,13 @@
     grid-template-areas:
         "logo"
         "menu";
+        
     align-items: center;
     gap: 12px;
     padding: 16px;
 }
 
-.site-header>a {
+.site-header > a {
     grid-area: logo;
     text-decoration: none;
 }
@@ -33,12 +33,12 @@
     height: 64px;
 }
 
-.site-header__logo h2 {
+.site-header__logo .logo {
     font-size: 25px;
     color: $white;
+    margin: 0;
 }
 
-/*Menú Derecho*/
 .site-header__nav {
     grid-area: menu;
     display: flex;
@@ -50,7 +50,6 @@
     font-size: 10px;
 }
 
-
 .site-header__nav ul {
     list-style: none;
     @include flex-center(14px);
@@ -59,7 +58,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 .site-header__nav ul a {
     text-decoration: none;
@@ -76,7 +74,7 @@
     @include flex-center(20px);
 }
 
-button {
+.site-header button {
     height: 40px;
     width: 100px;
     font-family: "LemonLight";
@@ -86,26 +84,25 @@ button {
     padding: 10px;
 }
 
-button:hover {
+.site-header button:hover {
     background-color: $accent;
     box-shadow: 0px 5px 5px 0px $black-overlay;
 }
 
-
 @include responsive(tablet) {
-
     .site-header {
-        display: grid;
         grid-template-columns: auto minmax(0, 1fr);
         grid-template-areas: "logo menu";
         padding: 16px 20px;
-        height: auto;
-        background-color: $green-dark;
     }
 
     .site-header__logo {
         justify-content: flex-start;
         padding: 12px 20px;
+    }
+
+    .site-header__logo .logo {
+        font-size: 32px;
     }
 
     .site-header__nav {
@@ -129,8 +126,6 @@ button:hover {
 }
 
 @include responsive(desktop) {
-
-    /*INDEX DESKTOP*/
     main {
         display: flex;
         flex-direction: column;
@@ -148,10 +143,15 @@ button:hover {
         padding: 10px;
     }
 
-    
     .site-header__logo {
         justify-content: flex-start;
         padding: 12px 20px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .site-header__logo .logo {
+        font-size: 38px;
     }
 
     .site-header__nav {
